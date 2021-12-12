@@ -82,7 +82,7 @@ body {
 }
 
 .el-wrapper:hover .img {
-  webkit-filter: blur(7px);
+  -webkit-filter: blur(7px);
   -o-filter: blur(7px);
   -ms-filter: blur(7px);
   filter: blur(7px);
@@ -284,22 +284,18 @@ body {
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px; 
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -310,7 +306,6 @@ body {
 {%if products%}
 <h3 style="text-align:center; color:yellow;">{{word}}</h3>
 <br>
-<!-- products data starttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
   <div class="row">
 
       {% for p in products %}
@@ -363,21 +358,11 @@ body {
 <h3 style="text-align:center; color:yellow;">No Search Found</h3>
 {%endif%}
 
-<script>
-    {%if messages %}
-    {%for message in messages%}
-    alert('{{message}}');
-    {%endfor%}
-    {%endif%}
-</script>
+
 <br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 {% endblock content %}

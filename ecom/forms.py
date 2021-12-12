@@ -14,7 +14,7 @@ class CustomerUserForm(forms.ModelForm):
 class CustomerForm(forms.ModelForm):
     class Meta:
         model=models.Customer
-        fields=['address','mobile','profile_pic']
+        fields=['address','mobile']
 
 class ProductForm(forms.ModelForm):
     class Meta:
@@ -27,10 +27,6 @@ class AddressForm(forms.Form):
     Mobile= forms.IntegerField()
     Address = forms.CharField(max_length=500)
 
-class FeedbackForm(forms.ModelForm):
-    class Meta:
-        model=models.Feedback
-        fields=['name','feedback']
 
 #for updating status of order
 class OrderForm(forms.ModelForm):
@@ -38,8 +34,3 @@ class OrderForm(forms.ModelForm):
         model=models.Orders
         fields=['status']
 
-#for contact us page
-class ContactusForm(forms.Form):
-    Name = forms.CharField(max_length=30)
-    Email = forms.EmailField()
-    Message = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
